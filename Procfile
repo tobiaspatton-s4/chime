@@ -1,1 +1,1 @@
-web: STREAMLIT_SERVER_PORT=$PORT streamlit run src/app.py
+web: gunicorn --chdir src wsgi --log-file -

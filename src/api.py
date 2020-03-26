@@ -10,13 +10,13 @@ from penn_chime.models import SimSirModel
 from penn_chime.parameters import Parameters
 from penn_chime.utils import RateLos
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/args', methods=['GET'])
+@application.route('/api/args', methods=['GET'])
 def get_args():
-    return app.send_static_file('sample_args.json')
+    return application.send_static_file('sample_args.json')
 
-@app.route('/args', methods=['POST'])
+@application.route('/api/args', methods=['POST'])
 def post_args():
     args = request.json
     
