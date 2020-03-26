@@ -11,6 +11,8 @@ streamlit = "*"
 pandas = "*"
 numpy = "*"
 altair = "*"
+flask = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
