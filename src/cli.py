@@ -94,6 +94,7 @@ def parse_args():
         ("--susceptible", int, 1, None, "Regional Population >= 1"),
         ("--ventilated-los", int, 0, None, "Hospitalized Length of Stay (days)"),
         ("--ventilated-rate", float, 0.0, 1.0, "Ventilated Rate: 0.0 - 1.0"),
+        ("--relative_contact_rate", float, 0.0, 1.0, "Reduction in social contact: 0.0 - 1.0"),
     ):
         parser.add_argument(arg, type=validator(cast, min_value, max_value))
     return parser.parse_args()
@@ -116,7 +117,7 @@ def main():
         icu=RateLos(a.icu_rate, a.icu_los),
         ventilated=RateLos(a.ventilated_rate, a.ventilated_los),
     )
-
+    
     m = SimSirModel(p)
 
     prefix = a.prefix

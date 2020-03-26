@@ -1,0 +1,15 @@
+{
+    "n_days": 60,
+    "current_hospitalized": 100,
+    "doubling_time": 9,
+    "hospitalized_rate": 0.1,
+    "hospitalized_los": 7,
+    "icu_los": 9,
+    "icu_rate": 0.001,
+    "known_infected": 600,
+    "market_share": 1,
+    "susceptible": 5000000,
+    "ventilated_los": 10,
+    "ventilated_rate": 0.001,
+    "relative_contact_rate": 0.8
+}
